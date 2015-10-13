@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
         <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
@@ -24,19 +24,26 @@
         <nav class="navbar  navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Thesis Manager</a>
+                <div class="brand">
+                    <a class="titleText" href="/"><img class="logo" src="/static/images/Icon.svg">hesis Manager</a>
+                </div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-right">
-                    <p class="welcome"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+                    <div class="welcome"><a href="#"><img src="/static/images/search.svg" style="height:15px"></a></div>
                 </div>
                 <div class="divider navbar-right">|</div>
                 <div class="navbar-right">
-                    <p class="welcome">Hi! Welcome {{user.nickname()}} </p>
+                    <div class="welcome"><a href="{{ url|safe }}">{{ url_linktext }}</a></div>
+                </div>
+                <div class="divider navbar-right">|</div>
+                <div class="navbar-right">
+                    <div class="welcome">Hi! Welcome {{user.nickname()}}</div>
                 </div>
             </div><!--/.navbar-collapse -->
         </div>
     </nav>
+    <div class="searchBar">
         <input type="search" id="searcher" placeholder="browse thesis or students">
         <button class="primary-btn btn" id="search_btn">Search</button>
         <div id='rel_th_container' class='list-inline'>
@@ -44,7 +51,7 @@
 
             </ul>
         </div>
-
+    </div>
         <div>
             <div><a href="/thesis/list"><button class="btn-primary btn">List Thesis</button></a></div>
             <div><a href="/faculty/list"><button class="btn-primary btn">List Faculty</button></a></div>

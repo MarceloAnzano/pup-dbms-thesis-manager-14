@@ -1,42 +1,47 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <link type="text/css" rel="stylesheet" href="/static/css/style.css" rel="stylesheet">
+	<title>Thesis Manager</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="/static/css/style.css">
-    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="static/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="static/bower_components/polymer/polymer.html">
+    <link rel="import" href="static/bower_components/paper-material/paper-material.html">
+    <link rel="import" href="static/bower_components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="static/bower_components/paper-button/paper-button.html">
+    <link rel="import" href="static/bower_components/paper-ripple/paper-ripple.html">
 </head>
  
 <body>
 
-<div class="navbar navbar-inverse" role="navigation" >
+<div class="jumbotron" style="box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);">
 	<div class="container">
-        <div class="navbar-header">
-	        <a class="navbar-brand"><h2>Database Management System<h2></a>
-        </div>
-      </div>
-</div>
-
-<div class="container">
-	<div class = "col-sm-8">
-		<center>
-		<h2>Polytechnic Unversity of the Philippines <br> Thesis Library</h2><br>
-		</center>
+		<h1 style="text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.8);">
+		<img class="loginLogo" src="/static/images/favicon.svg" style="width: 10%">hesis Manager<br>
+		<!--
+		<span class="subtitle">Polytechnic Unversity of the Philippines</span>
+		-->
+		</h1>
 	</div>
+	<div class="container" style="margin-left:150px;">
+		<br><br>
+		<paper-button raised class="colorfulBtn">
+			<a class="linkLogin" href="{{login}}" >LOGIN</a>
+		</paper-button>
+		<!--
+		<span class="divider1">|</span>
+		-->
+		<paper-button raised class="colorfulBtn">
+			<a class="linkLogin" href="{{register}}">REGISTER</a>
+		</paper-button>
+	</div>
+</div>
 		
-	<div class = "col-sm-4">
-
-		<div class="jumbotron text-center">
-			<br><br>
-			<a href="{{login}}" class="btn btn-danger" style = "padding-left:27px; padding-right:27px">LOGIN</a><br><br>
-			<a href="{{register}}" class="btn btn-danger">REGISTER</a>
-			<br><br>
-		</div>
-	</div>
-	
-</div>
 
 </body>
 </html>
